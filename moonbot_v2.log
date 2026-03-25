@@ -1,0 +1,555 @@
+2026-03-25 15:09:01,884 INFO Websocket connected
+2026-03-25 15:09:01,884 INFO WS Binance conectado
+2026-03-25 15:09:03,273 INFO [BTC] 50 candles
+2026-03-25 15:09:03,802 INFO [ETH] 50 candles
+2026-03-25 15:09:04,339 INFO [SOL] 50 candles
+2026-03-25 15:09:05,342 INFO API server em http://localhost:8765
+2026-03-25 15:09:05,426 INFO [BTC] Trading loop v2 iniciado (early entry)
+2026-03-25 15:09:05,427 INFO [ETH] Trading loop v2 iniciado (early entry)
+2026-03-25 15:09:05,428 INFO [SOL] Trading loop v2 iniciado (early entry)
+2026-03-25 15:09:06,134 INFO [ETH] PRE-SIGNAL para slot 1774462200: DOWN conf=0.80 | {'macd': 'HISTDN -0.4452', 'momentum': 'MOMDN -0.12%', 'rsi': 'RSI 66.1'}
+2026-03-25 15:09:06,137 INFO [SOL] PRE-SIGNAL para slot 1774462200: DOWN conf=0.80 | {'macd': 'HISTDN -0.0170', 'momentum': 'MOMDN -0.13%', 'rsi': 'RSI 61.2'}
+2026-03-25 15:09:11,070 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:05PM-2:10PM ET | YES=0.585 NO=0.415
+2026-03-25 15:09:11,101 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:05PM-2:10PM ET | YES=0.795 NO=0.205
+2026-03-25 15:09:11,104 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:05PM-2:10PM ET | YES=0.925 NO=0.075
+2026-03-25 15:09:41,133 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:05PM-2:10PM ET | YES=0.585 NO=0.415
+2026-03-25 15:09:41,207 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:05PM-2:10PM ET | YES=0.925 NO=0.075
+2026-03-25 15:09:41,224 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:05PM-2:10PM ET | YES=0.795 NO=0.205
+2026-03-25 15:10:01,069 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:10:01,197 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:10:01,208 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:10:03,574 INFO [ETH] >>> ENTRY DOWN | March 25, 2:10PM-2:15PM ET | conf=0.80 ev=0.300 | $3.00 @ 50.0c | time_in_slot=3s
+2026-03-25 15:10:03,574 INFO [DRY RUN] [ETH] FAK BUY $3.00 @ 50.0c -> 6.00sh
+2026-03-25 15:10:03,574 INFO [ETH] [OK] DOWN via DRY_FAK @ 50.0c | March 25, 2:10PM-2:15PM ET
+2026-03-25 15:10:03,716 INFO [SOL] >>> ENTRY DOWN | March 25, 2:10PM-2:15PM ET | conf=0.80 ev=0.300 | $3.00 @ 50.0c | time_in_slot=3s
+2026-03-25 15:10:03,716 INFO [DRY RUN] [SOL] FAK BUY $3.00 @ 50.0c -> 6.00sh
+2026-03-25 15:10:03,716 INFO [SOL] [OK] DOWN via DRY_FAK @ 50.0c | March 25, 2:10PM-2:15PM ET
+2026-03-25 15:10:30,980 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:10:31,300 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:10:31,323 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:11:00,872 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:11:01,322 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:11:01,335 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:11:31,358 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:11:31,404 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:11:31,435 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:12:01,385 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:12:01,464 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:12:01,468 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:12:51,447 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:12:51,498 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:13:00,791 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:13:41,687 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:13:41,700 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:13:50,742 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.495 NO=0.505
+2026-03-25 15:14:11,866 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:14:11,915 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.505 NO=0.495
+2026-03-25 15:14:21,261 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.845 NO=0.155
+2026-03-25 15:14:50,885 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.815 NO=0.185
+2026-03-25 15:14:50,900 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.555 NO=0.445
+2026-03-25 15:14:51,129 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:10PM-2:15PM ET | YES=0.845 NO=0.155
+2026-03-25 15:15:01,011 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.490 NO=0.510
+2026-03-25 15:15:01,280 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.500 NO=0.500
+2026-03-25 15:15:01,315 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:15:31,012 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.490 NO=0.510
+2026-03-25 15:15:31,306 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:15:31,343 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.500 NO=0.500
+2026-03-25 15:16:01,048 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.490 NO=0.510
+2026-03-25 15:16:01,260 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:16:01,304 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.500 NO=0.500
+2026-03-25 15:16:30,955 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.490 NO=0.510
+2026-03-25 15:16:31,279 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.500 NO=0.500
+2026-03-25 15:16:31,313 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:17:00,996 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.490 NO=0.510
+2026-03-25 15:17:01,312 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.500 NO=0.500
+2026-03-25 15:17:01,383 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:17:30,863 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:17:45,417 INFO [SOL] Cooldown 10min apos LOSS
+2026-03-25 15:17:45,417 INFO [SOL] LOSS | DOWN | entry=50.0c | pnl=$3.00 | March 25, 2:10PM-2:15PM ET
+2026-03-25 15:17:45,730 INFO [ETH] Cooldown 10min apos LOSS
+2026-03-25 15:17:45,730 INFO [ETH] LOSS | DOWN | entry=50.0c | pnl=$3.00 | March 25, 2:10PM-2:15PM ET
+2026-03-25 15:18:00,930 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.785 NO=0.215
+2026-03-25 15:18:01,312 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.865 NO=0.135
+2026-03-25 15:18:06,561 INFO Websocket connected
+2026-03-25 15:18:06,561 INFO WS Binance conectado
+2026-03-25 15:18:07,847 INFO [BTC] 50 candles
+2026-03-25 15:18:08,355 INFO [ETH] 50 candles
+2026-03-25 15:18:08,866 INFO [SOL] 50 candles
+2026-03-25 15:18:09,869 INFO API server em http://localhost:8765
+2026-03-25 15:18:09,944 INFO [BTC] Trading loop v2 iniciado (early entry)
+2026-03-25 15:18:09,945 INFO [ETH] Trading loop v2 iniciado (early entry)
+2026-03-25 15:18:09,946 INFO [SOL] Trading loop v2 iniciado (early entry)
+2026-03-25 15:18:11,670 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:18:11,687 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.785 NO=0.215
+2026-03-25 15:18:11,690 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.865 NO=0.135
+2026-03-25 15:19:01,345 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.865 NO=0.135
+2026-03-25 15:19:01,347 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.785 NO=0.215
+2026-03-25 15:19:01,350 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:19:31,039 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.505 NO=0.495
+2026-03-25 15:19:31,047 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.865 NO=0.135
+2026-03-25 15:19:31,063 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:15PM-2:20PM ET | YES=0.785 NO=0.215
+2026-03-25 15:20:01,280 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:20:01,316 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:20:01,456 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.500 NO=0.500
+2026-03-25 15:20:30,952 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.485 NO=0.515
+2026-03-25 15:20:31,342 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:20:31,377 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:21:00,971 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:21:00,973 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:21:01,037 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.485 NO=0.515
+2026-03-25 15:21:31,065 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.485 NO=0.515
+2026-03-25 15:21:31,086 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:21:31,097 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:22:00,982 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.485 NO=0.515
+2026-03-25 15:22:01,169 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:22:01,194 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.645 NO=0.355
+2026-03-25 15:22:30,849 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.485 NO=0.515
+2026-03-25 15:23:01,303 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:23:01,374 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.645 NO=0.355
+2026-03-25 15:23:11,206 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.685 NO=0.315
+2026-03-25 15:23:41,761 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:23:41,862 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.645 NO=0.355
+2026-03-25 15:24:00,844 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.685 NO=0.315
+2026-03-25 15:24:10,993 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.505 NO=0.495
+2026-03-25 15:24:11,025 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.645 NO=0.355
+2026-03-25 15:24:31,252 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.685 NO=0.315
+2026-03-25 15:24:40,995 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.965 NO=0.035
+2026-03-25 15:24:41,088 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:20PM-2:25PM ET | YES=0.645 NO=0.355
+2026-03-25 15:25:00,975 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.475 NO=0.525
+2026-03-25 15:25:01,119 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.495 NO=0.505
+2026-03-25 15:25:01,268 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.495 NO=0.505
+2026-03-25 15:25:30,971 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.475 NO=0.525
+2026-03-25 15:25:31,154 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.495 NO=0.505
+2026-03-25 15:25:31,243 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.495 NO=0.505
+2026-03-25 15:26:00,876 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.475 NO=0.525
+2026-03-25 15:26:01,181 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.485 NO=0.515
+2026-03-25 15:26:01,226 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.495 NO=0.505
+2026-03-25 15:26:17,560 INFO Websocket connected
+2026-03-25 15:26:17,561 INFO WS Binance conectado
+2026-03-25 15:26:18,850 INFO [BTC] 50 candles
+2026-03-25 15:26:19,445 INFO [ETH] 50 candles
+2026-03-25 15:26:20,045 INFO [SOL] 50 candles
+2026-03-25 15:27:06,577 INFO Websocket connected
+2026-03-25 15:27:06,578 INFO WS Binance conectado
+2026-03-25 15:27:07,962 INFO [BTC] 50 candles
+2026-03-25 15:27:08,521 INFO [ETH] 50 candles
+2026-03-25 15:27:09,115 INFO [SOL] 50 candles
+2026-03-25 15:27:10,118 INFO API server em http://localhost:8765
+2026-03-25 15:27:20,564 INFO Websocket connected
+2026-03-25 15:27:20,564 INFO WS Binance conectado
+2026-03-25 15:27:22,194 INFO [BTC] 50 candles
+2026-03-25 15:27:22,727 INFO [ETH] 50 candles
+2026-03-25 15:27:23,279 INFO [SOL] 50 candles
+2026-03-25 15:27:24,283 INFO API server em http://localhost:8765
+2026-03-25 15:27:24,362 INFO [BTC] Trading loop v2 iniciado (early entry)
+2026-03-25 15:27:24,363 INFO [ETH] Trading loop v2 iniciado (early entry)
+2026-03-25 15:27:24,364 INFO [SOL] Trading loop v2 iniciado (early entry)
+2026-03-25 15:27:41,120 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.485 NO=0.515
+2026-03-25 15:27:41,126 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.455 NO=0.545
+2026-03-25 15:27:41,173 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.445 NO=0.555
+2026-03-25 15:28:21,787 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.485 NO=0.515
+2026-03-25 15:28:21,830 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.455 NO=0.545
+2026-03-25 15:28:21,834 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:25PM-2:30PM ET | YES=0.445 NO=0.555
+2026-03-25 15:29:23,434 INFO Websocket connected
+2026-03-25 15:29:23,434 INFO WS Binance conectado
+2026-03-25 15:29:24,877 INFO [BTC] 50 candles
+2026-03-25 15:30:23,617 INFO Websocket connected
+2026-03-25 15:30:23,618 INFO WS Binance conectado
+2026-03-25 15:30:25,432 INFO [BTC] 50 candles
+2026-03-25 15:30:26,116 INFO [ETH] 50 candles
+2026-03-25 15:30:26,796 INFO [SOL] 50 candles
+2026-03-25 15:30:28,737 INFO CLOB client inicializado
+2026-03-25 15:30:28,740 INFO API server em http://localhost:8765
+2026-03-25 15:30:28,820 INFO [BTC] Trading loop v2 iniciado (early entry)
+2026-03-25 15:30:28,820 INFO [ETH] Trading loop v2 iniciado (early entry)
+2026-03-25 15:30:28,821 INFO [SOL] Trading loop v2 iniciado (early entry)
+2026-03-25 15:30:31,324 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.485 NO=0.515
+2026-03-25 15:30:31,338 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:30:31,410 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:31:01,851 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.485 NO=0.515
+2026-03-25 15:31:01,867 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:31:01,905 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:31:31,925 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:31:31,991 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.485 NO=0.515
+2026-03-25 15:31:41,153 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:32:01,768 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:32:01,884 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.485 NO=0.515
+2026-03-25 15:32:11,560 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:33:01,183 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.490 NO=0.510
+2026-03-25 15:33:01,316 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.485 NO=0.515
+2026-03-25 15:33:01,893 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.325 NO=0.675
+2026-03-25 15:33:51,826 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.385 NO=0.615
+2026-03-25 15:33:51,986 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.315 NO=0.685
+2026-03-25 15:34:01,367 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.325 NO=0.675
+2026-03-25 15:34:21,202 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.385 NO=0.615
+2026-03-25 15:34:21,395 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.315 NO=0.685
+2026-03-25 15:34:31,147 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.325 NO=0.675
+2026-03-25 15:34:51,245 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.315 NO=0.685
+2026-03-25 15:34:51,687 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:30PM-2:35PM ET | YES=0.385 NO=0.615
+2026-03-25 15:35:01,531 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:35:01,540 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:35:01,594 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:35:31,300 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:35:31,344 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:35:31,369 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:36:01,012 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:36:01,056 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:36:01,464 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:36:30,878 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:36:31,078 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:36:31,112 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:37:01,155 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:37:01,198 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:37:01,309 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.505 NO=0.495
+2026-03-25 15:37:51,805 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:37:51,835 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.485 NO=0.515
+2026-03-25 15:38:00,887 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.510 NO=0.490
+2026-03-25 15:38:51,186 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.495 NO=0.505
+2026-03-25 15:38:51,193 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.485 NO=0.515
+2026-03-25 15:38:51,220 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.510 NO=0.490
+2026-03-25 15:39:00,193 INFO [SOL] PRE-SIGNAL para slot 1774464000: DOWN conf=0.55 | {'macd': 'HISTDN -0.0144', 'momentum': 'MOMDN -0.15%', 'rsi': 'RSI 23.9'}
+2026-03-25 15:39:00,202 INFO [BTC] PRE-SIGNAL para slot 1774464000: DOWN conf=0.55 | {'macd': 'HISTDN -6.0950', 'momentum': 'MOMDN -0.12%', 'rsi': 'RSI 18.7'}
+2026-03-25 15:39:21,331 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.485 NO=0.515
+2026-03-25 15:39:21,344 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.375 NO=0.625
+2026-03-25 15:39:21,348 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.510 NO=0.490
+2026-03-25 15:39:50,944 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.375 NO=0.625
+2026-03-25 15:39:50,947 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.485 NO=0.515
+2026-03-25 15:39:50,972 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:35PM-2:40PM ET | YES=0.510 NO=0.490
+2026-03-25 15:40:01,390 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.500 NO=0.500
+2026-03-25 15:40:01,421 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:40:01,460 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:40:03,936 INFO [BTC] >>> ENTRY DOWN | March 25, 2:40PM-2:45PM ET | conf=0.55 ev=0.050 | $1.14 @ 50.0c | time_in_slot=3s
+2026-03-25 15:40:03,939 INFO CLOB client inicializado
+2026-03-25 15:40:03,958 INFO [SOL] >>> ENTRY DOWN | March 25, 2:40PM-2:45PM ET | conf=0.55 ev=0.050 | $1.14 @ 50.0c | time_in_slot=3s
+2026-03-25 15:40:03,960 INFO CLOB client inicializado
+2026-03-25 15:40:04,183 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=13840077917644763344672854162932051912335666852349930810253853342045943107213 "HTTP/2 200 OK"
+2026-03-25 15:40:04,235 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=13840077917644763344672854162932051912335666852349930810253853342045943107213 "HTTP/2 200 OK"
+2026-03-25 15:40:04,255 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=11448486003939999297233662393812577977793920471277224973699609242680576174955 "HTTP/2 200 OK"
+2026-03-25 15:40:04,313 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=11448486003939999297233662393812577977793920471277224973699609242680576174955 "HTTP/2 200 OK"
+2026-03-25 15:40:04,326 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=13840077917644763344672854162932051912335666852349930810253853342045943107213 "HTTP/2 200 OK"
+2026-03-25 15:40:04,353 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=11448486003939999297233662393812577977793920471277224973699609242680576174955 "HTTP/2 200 OK"
+2026-03-25 15:40:04,816 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 15:40:04,816 INFO [SOL] FAK OK: 2.31sh @ 49.0c
+2026-03-25 15:40:04,816 INFO [SOL] [OK] DOWN via FAK @ 49.0c | March 25, 2:40PM-2:45PM ET
+2026-03-25 15:40:04,853 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 15:40:04,854 INFO [BTC] FAK OK: 2.28sh @ 49.6c
+2026-03-25 15:40:04,854 INFO [BTC] [OK] DOWN via FAK @ 49.6c | March 25, 2:40PM-2:45PM ET
+2026-03-25 15:40:31,009 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:40:31,054 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.505 NO=0.495
+2026-03-25 15:40:31,328 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.500 NO=0.500
+2026-03-25 15:41:01,070 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.505 NO=0.495
+2026-03-25 15:41:01,132 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:41:01,342 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.500 NO=0.500
+2026-03-25 15:41:31,243 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.505 NO=0.495
+2026-03-25 15:41:31,307 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:41:31,436 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.500 NO=0.500
+2026-03-25 15:42:00,988 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.500 NO=0.500
+2026-03-25 15:42:01,345 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.505 NO=0.495
+2026-03-25 15:42:01,430 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:42:30,932 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.505 NO=0.495
+2026-03-25 15:42:31,065 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.495 NO=0.505
+2026-03-25 15:42:31,135 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.205 NO=0.795
+2026-03-25 15:43:11,389 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.505 NO=0.495
+2026-03-25 15:43:11,639 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.225 NO=0.775
+2026-03-25 15:43:11,683 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.205 NO=0.795
+2026-03-25 15:44:01,210 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.205 NO=0.795
+2026-03-25 15:44:01,217 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.225 NO=0.775
+2026-03-25 15:44:01,381 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.145 NO=0.855
+2026-03-25 15:44:31,311 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.145 NO=0.855
+2026-03-25 15:44:31,577 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.225 NO=0.775
+2026-03-25 15:44:31,620 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:40PM-2:45PM ET | YES=0.205 NO=0.795
+2026-03-25 15:45:01,372 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.535 NO=0.465
+2026-03-25 15:45:01,493 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.505 NO=0.495
+2026-03-25 15:45:01,555 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:45:31,226 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.535 NO=0.465
+2026-03-25 15:45:31,404 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:45:31,427 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.505 NO=0.495
+2026-03-25 15:46:01,277 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.505 NO=0.495
+2026-03-25 15:46:01,281 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:46:01,640 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.535 NO=0.465
+2026-03-25 15:46:31,201 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.505 NO=0.495
+2026-03-25 15:46:31,227 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:46:31,582 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.535 NO=0.465
+2026-03-25 15:47:01,662 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.505 NO=0.495
+2026-03-25 15:47:01,676 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.535 NO=0.465
+2026-03-25 15:47:01,723 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:47:31,140 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:48:01,983 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.505 NO=0.495
+2026-03-25 15:48:01,996 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.525 NO=0.475
+2026-03-25 15:48:11,976 INFO [SOL] WIN | DOWN | entry=49.0c | pnl=+$1.18 | March 25, 2:40PM-2:45PM ET
+2026-03-25 15:48:12,011 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:45PM-2:50PM ET | YES=0.485 NO=0.515
+2026-03-25 15:50:24,989 INFO Websocket connected
+2026-03-25 15:50:24,989 INFO WS Binance conectado
+2026-03-25 15:50:26,369 INFO [BTC] 50 candles
+2026-03-25 15:50:26,979 INFO [ETH] 50 candles
+2026-03-25 15:50:27,602 INFO [SOL] 50 candles
+2026-03-25 15:50:29,399 INFO CLOB client inicializado
+2026-03-25 15:50:29,402 INFO API server em http://localhost:8765
+2026-03-25 15:50:29,452 INFO [BTC] Trading loop v2 iniciado (early entry)
+2026-03-25 15:50:29,454 INFO [ETH] Trading loop v2 iniciado (early entry)
+2026-03-25 15:50:29,455 INFO [SOL] Trading loop v2 iniciado (early entry)
+2026-03-25 15:50:31,238 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.515 NO=0.485
+2026-03-25 15:50:31,261 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.515 NO=0.485
+2026-03-25 15:50:31,344 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.505 NO=0.495
+2026-03-25 15:51:01,990 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.515 NO=0.485
+2026-03-25 15:51:02,008 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.515 NO=0.485
+2026-03-25 15:51:02,032 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.505 NO=0.495
+2026-03-25 15:51:30,957 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.515 NO=0.485
+2026-03-25 15:51:31,030 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.505 NO=0.495
+2026-03-25 15:51:31,041 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.530 NO=0.470
+2026-03-25 15:52:01,199 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.535 NO=0.465
+2026-03-25 15:52:01,225 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.530 NO=0.470
+2026-03-25 15:52:01,280 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.505 NO=0.495
+2026-03-25 15:53:01,089 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.530 NO=0.470
+2026-03-25 15:53:01,130 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.535 NO=0.465
+2026-03-25 15:53:01,146 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.565 NO=0.435
+2026-03-25 15:53:51,319 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.530 NO=0.470
+2026-03-25 15:53:51,339 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.535 NO=0.465
+2026-03-25 15:53:51,369 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.565 NO=0.435
+2026-03-25 15:54:20,813 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.565 NO=0.435
+2026-03-25 15:54:21,368 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.535 NO=0.465
+2026-03-25 15:54:21,373 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.925 NO=0.075
+2026-03-25 15:54:50,965 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.865 NO=0.135
+2026-03-25 15:54:50,971 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.925 NO=0.075
+2026-03-25 15:54:51,228 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:50PM-2:55PM ET | YES=0.565 NO=0.435
+2026-03-25 15:55:01,065 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:55:01,454 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:55:01,463 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.510 NO=0.490
+2026-03-25 15:55:31,048 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:55:31,058 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:55:31,076 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.510 NO=0.490
+2026-03-25 15:56:01,157 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:56:01,204 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:56:01,257 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.510 NO=0.490
+2026-03-25 15:56:31,146 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:56:31,190 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:56:31,371 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.510 NO=0.490
+2026-03-25 15:57:00,968 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.510 NO=0.490
+2026-03-25 15:57:01,191 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:57:01,252 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:57:51,594 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.285 NO=0.715
+2026-03-25 15:57:51,761 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:58:00,809 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.025 NO=0.975
+2026-03-25 15:58:41,515 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.285 NO=0.715
+2026-03-25 15:58:50,851 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.505 NO=0.495
+2026-03-25 15:58:50,927 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.025 NO=0.975
+2026-03-25 15:59:00,024 INFO [ETH] PRE-SIGNAL para slot 1774465200: UP conf=0.80 | {'macd': 'HISTUP 0.1929', 'momentum': 'MOMUP 0.14%', 'rsi': 'RSI 44.8'}
+2026-03-25 15:59:00,359 INFO [SOL] PRE-SIGNAL para slot 1774465200: UP conf=0.80 | {'macd': 'HISTUP 0.0104', 'momentum': 'MOMUP 0.14%', 'rsi': 'RSI 42.3'}
+2026-03-25 15:59:10,864 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.285 NO=0.715
+2026-03-25 15:59:20,805 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.025 NO=0.975
+2026-03-25 15:59:21,238 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.025 NO=0.975
+2026-03-25 15:59:41,159 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.285 NO=0.715
+2026-03-25 15:59:51,091 INFO [SOL] Mercado: Solana Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.025 NO=0.975
+2026-03-25 15:59:51,201 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 2:55PM-3:00PM ET | YES=0.025 NO=0.975
+2026-03-25 16:00:00,986 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:00:01,153 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:00:01,168 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:00:03,628 INFO [ETH] >>> ENTRY UP | March 25, 3:00PM-3:05PM ET | conf=0.80 ev=0.300 | $1.20 @ 50.0c | time_in_slot=3s | entry #1
+2026-03-25 16:00:03,631 INFO CLOB client inicializado
+2026-03-25 16:00:03,861 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=110221259470267995232943841515298689108685421785521748697342146853930005374057 "HTTP/2 200 OK"
+2026-03-25 16:00:03,900 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=110221259470267995232943841515298689108685421785521748697342146853930005374057 "HTTP/2 200 OK"
+2026-03-25 16:00:03,933 INFO [SOL] >>> ENTRY UP | March 25, 3:00PM-3:05PM ET | conf=0.80 ev=0.300 | $1.20 @ 50.0c | time_in_slot=3s | entry #1
+2026-03-25 16:00:03,935 INFO CLOB client inicializado
+2026-03-25 16:00:03,939 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=110221259470267995232943841515298689108685421785521748697342146853930005374057 "HTTP/2 200 OK"
+2026-03-25 16:00:04,188 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=57225856786385253249138098215766458231729214108836490767042052255256740007648 "HTTP/2 200 OK"
+2026-03-25 16:00:04,232 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=57225856786385253249138098215766458231729214108836490767042052255256740007648 "HTTP/2 200 OK"
+2026-03-25 16:00:04,276 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=57225856786385253249138098215766458231729214108836490767042052255256740007648 "HTTP/2 200 OK"
+2026-03-25 16:00:04,424 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:00:04,425 INFO [ETH] FAK OK: 2.26sh @ 53.0c
+2026-03-25 16:00:04,425 INFO [ETH] [OK] ENTRY UP via FAK @ 53.0c | March 25, 3:00PM-3:05PM ET
+2026-03-25 16:00:04,730 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:00:04,731 INFO [SOL] FAK OK: 2.00sh @ 60.0c
+2026-03-25 16:00:04,731 INFO [SOL] [OK] ENTRY UP via FAK @ 60.0c | March 25, 3:00PM-3:05PM ET
+2026-03-25 16:00:30,997 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:01:00,945 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:01:10,878 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:01:11,122 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:01:31,268 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:01:40,996 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:01:41,313 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:02:01,111 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:02:10,849 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:02:11,241 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:02:51,628 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:03:01,121 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:03:01,173 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:03:41,596 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:03:41,616 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:03:50,910 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:04:00,104 INFO [ETH] PRE-SIGNAL para slot 1774465500: UP conf=0.60 | {'macd': 'HISTUP 0.3269', 'cvd': 'CVDUP 124', 'rsi': 'RSI 42.0'}
+2026-03-25 16:04:00,146 INFO [BTC] PRE-SIGNAL para slot 1774465500: UP conf=0.55 | {'macd': 'HIST+ 13.4980', 'momentum': 'MOMUP 0.11%', 'rsi': 'RSI 48.3'}
+2026-03-25 16:04:11,057 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.505 NO=0.495
+2026-03-25 16:04:11,066 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:04:21,212 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:04:41,021 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.725 NO=0.275
+2026-03-25 16:04:41,160 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.395 NO=0.605
+2026-03-25 16:04:51,024 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:00PM-3:05PM ET | YES=0.515 NO=0.485
+2026-03-25 16:05:00,992 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.500 NO=0.500
+2026-03-25 16:05:01,072 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.515 NO=0.485
+2026-03-25 16:05:01,099 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.510 NO=0.490
+2026-03-25 16:05:03,604 INFO [BTC] >>> ENTRY UP | March 25, 3:05PM-3:10PM ET | conf=0.55 ev=0.050 | $1.14 @ 50.0c | time_in_slot=3s | entry #1
+2026-03-25 16:05:03,607 INFO CLOB client inicializado
+2026-03-25 16:05:03,617 INFO [ETH] >>> ENTRY UP | March 25, 3:05PM-3:10PM ET | conf=0.60 ev=0.100 | $1.15 @ 50.0c | time_in_slot=3s | entry #1
+2026-03-25 16:05:03,619 INFO CLOB client inicializado
+2026-03-25 16:05:03,867 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=61273273507161521718948061367111778950003475815621155051065903542859651433554 "HTTP/2 200 OK"
+2026-03-25 16:05:03,872 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=88490642349105292370064490699540700133771045880691283184845566139528700783168 "HTTP/2 200 OK"
+2026-03-25 16:05:03,909 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=61273273507161521718948061367111778950003475815621155051065903542859651433554 "HTTP/2 200 OK"
+2026-03-25 16:05:03,917 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=88490642349105292370064490699540700133771045880691283184845566139528700783168 "HTTP/2 200 OK"
+2026-03-25 16:05:03,955 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=61273273507161521718948061367111778950003475815621155051065903542859651433554 "HTTP/2 200 OK"
+2026-03-25 16:05:03,961 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=88490642349105292370064490699540700133771045880691283184845566139528700783168 "HTTP/2 200 OK"
+2026-03-25 16:05:04,496 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:05:04,497 INFO [ETH] FAK OK: 1.84sh @ 62.0c
+2026-03-25 16:05:04,497 INFO [ETH] [OK] ENTRY UP via FAK @ 62.0c | March 25, 3:05PM-3:10PM ET
+2026-03-25 16:05:04,504 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:05:04,504 INFO [BTC] FAK OK: 1.95sh @ 58.0c
+2026-03-25 16:05:04,504 INFO [BTC] [OK] ENTRY UP via FAK @ 58.0c | March 25, 3:05PM-3:10PM ET
+2026-03-25 16:05:11,242 INFO [BTC] DOUBLE DOWN signal: UP conf=0.63 (1st was 0.55, bump +0.08)
+2026-03-25 16:05:16,847 INFO [BTC] DOUBLE DOWN signal: UP conf=0.63 (1st was 0.55, bump +0.08)
+2026-03-25 16:05:30,911 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.535 NO=0.465
+2026-03-25 16:06:00,805 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.535 NO=0.465
+2026-03-25 16:06:11,090 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.510 NO=0.490
+2026-03-25 16:06:11,300 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.525 NO=0.475
+2026-03-25 16:06:31,168 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.535 NO=0.465
+2026-03-25 16:06:41,045 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.510 NO=0.490
+2026-03-25 16:06:41,134 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.525 NO=0.475
+2026-03-25 16:07:00,969 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.535 NO=0.465
+2026-03-25 16:07:11,005 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.510 NO=0.490
+2026-03-25 16:07:11,133 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.525 NO=0.475
+2026-03-25 16:07:51,332 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.535 NO=0.465
+2026-03-25 16:08:00,887 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.395 NO=0.605
+2026-03-25 16:08:01,047 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.525 NO=0.475
+2026-03-25 16:08:13,582 INFO [SOL] WIN | UP | entry=60.0c | pnl=+$0.80 | March 25, 3:00PM-3:05PM ET
+2026-03-25 16:08:31,646 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.305 NO=0.695
+2026-03-25 16:08:41,880 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.395 NO=0.605
+2026-03-25 16:08:50,969 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.210 NO=0.790
+2026-03-25 16:09:00,287 INFO [SOL] PRE-SIGNAL para slot 1774465800: DOWN conf=0.60 | {'macd': 'HISTDN -0.0114', 'cvd': 'CVDDN -1909', 'rsi': 'RSI 44.0'}
+2026-03-25 16:09:00,392 INFO [ETH] PRE-SIGNAL para slot 1774465800: DOWN conf=0.60 | {'macd': 'HISTDN -0.2900', 'cvd': 'CVDDN -11', 'rsi': 'RSI 47.6'}
+2026-03-25 16:09:01,042 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.305 NO=0.695
+2026-03-25 16:09:11,198 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.395 NO=0.605
+2026-03-25 16:09:20,873 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.210 NO=0.790
+2026-03-25 16:09:30,870 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.305 NO=0.695
+2026-03-25 16:09:41,057 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.395 NO=0.605
+2026-03-25 16:09:51,148 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:05PM-3:10PM ET | YES=0.210 NO=0.790
+2026-03-25 16:10:01,599 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:10:01,651 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.515 NO=0.485
+2026-03-25 16:10:01,654 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.505 NO=0.495
+2026-03-25 16:10:31,002 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.515 NO=0.485
+2026-03-25 16:10:48,508 INFO [ETH] WIN | UP | entry=53.0c | pnl=+$1.06 | March 25, 3:00PM-3:05PM ET
+2026-03-25 16:10:50,069 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:10:50,188 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.505 NO=0.495
+2026-03-25 16:10:50,586 INFO [ETH] >>> ENTRY DOWN | March 25, 3:10PM-3:15PM ET | conf=0.60 ev=0.100 | $1.15 @ 50.0c | time_in_slot=49s | entry #1
+2026-03-25 16:10:50,588 INFO CLOB client inicializado
+2026-03-25 16:10:50,697 INFO [SOL] >>> ENTRY DOWN | March 25, 3:10PM-3:15PM ET | conf=0.60 ev=0.100 | $1.15 @ 50.0c | time_in_slot=49s | entry #1
+2026-03-25 16:10:50,699 INFO CLOB client inicializado
+2026-03-25 16:10:50,798 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=100816788611790963960409858167483243390083751280580506026360464563674959019119 "HTTP/2 200 OK"
+2026-03-25 16:10:50,836 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=100816788611790963960409858167483243390083751280580506026360464563674959019119 "HTTP/2 200 OK"
+2026-03-25 16:10:50,871 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=100816788611790963960409858167483243390083751280580506026360464563674959019119 "HTTP/2 200 OK"
+2026-03-25 16:10:50,872 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=23442342231984317116052426160410886381868456380246409530686351761750363482226 "HTTP/2 200 OK"
+2026-03-25 16:10:50,909 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=23442342231984317116052426160410886381868456380246409530686351761750363482226 "HTTP/2 200 OK"
+2026-03-25 16:10:50,947 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=23442342231984317116052426160410886381868456380246409530686351761750363482226 "HTTP/2 200 OK"
+2026-03-25 16:10:51,307 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 400 Bad Request"
+2026-03-25 16:10:51,308 INFO [ETH] FAK falhou: PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. 
+2026-03-25 16:10:51,419 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:10:51,419 INFO [SOL] FAK OK: 1.70sh @ 67.0c
+2026-03-25 16:10:51,420 INFO [SOL] [OK] ENTRY DOWN via FAK @ 67.0c | March 25, 3:10PM-3:15PM ET
+2026-03-25 16:10:51,502 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:10:51,503 INFO [ETH] GTC live: 5.00sh @ 67.0c
+2026-03-25 16:10:51,503 INFO [ETH] [OK] ENTRY DOWN via GTC_live @ 67.0c | March 25, 3:10PM-3:15PM ET
+2026-03-25 16:10:52,526 INFO [SOL] DOUBLE DOWN signal: DOWN conf=0.80 (1st was 0.60, bump +0.20)
+2026-03-25 16:10:58,145 INFO [SOL] DOUBLE DOWN signal: DOWN conf=0.80 (1st was 0.60, bump +0.20)
+2026-03-25 16:11:00,840 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.515 NO=0.485
+2026-03-25 16:11:31,203 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.515 NO=0.485
+2026-03-25 16:12:01,017 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:12:01,048 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:12:01,156 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.515 NO=0.485
+2026-03-25 16:12:51,541 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.515 NO=0.485
+2026-03-25 16:13:01,172 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:13:01,231 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:13:40,833 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.125 NO=0.875
+2026-03-25 16:13:41,664 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:13:41,679 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:13:55,598 INFO [ETH] Cooldown 10min apos LOSS
+2026-03-25 16:13:55,599 INFO [ETH] LOSS | UP | entry=62.0c | pnl=$1.15 | March 25, 3:05PM-3:10PM ET
+2026-03-25 16:14:00,270 INFO [SOL] PRE-SIGNAL para slot 1774466100: UP conf=0.80 | {'macd': 'HISTUP 0.0222', 'cvd': 'CVDUP 849', 'momentum': 'MOMUP 0.16%', 'rsi': 'RSI 58.9'}
+2026-03-25 16:14:00,288 INFO [ETH] PRE-SIGNAL para slot 1774466100: UP conf=0.80 | {'macd': 'HISTUP 0.4912', 'cvd': 'CVDUP 16', 'momentum': 'MOMUP 0.20%', 'rsi': 'RSI 66.2'}
+2026-03-25 16:14:00,380 INFO [BTC] PRE-SIGNAL para slot 1774466100: UP conf=0.60 | {'macd': 'HISTUP 6.0732', 'cvd': 'CVDUP 1', 'rsi': 'RSI 55.5'}
+2026-03-25 16:14:11,212 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:14:11,303 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.125 NO=0.875
+2026-03-25 16:14:11,452 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.500 NO=0.500
+2026-03-25 16:14:26,500 INFO [BTC] Cooldown 10min apos LOSS
+2026-03-25 16:14:26,500 INFO [BTC] LOSS | UP | entry=58.0c | pnl=$1.14 | March 25, 3:05PM-3:10PM ET
+2026-03-25 16:14:40,968 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.195 NO=0.805
+2026-03-25 16:14:40,991 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.125 NO=0.875
+2026-03-25 16:14:41,149 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:10PM-3:15PM ET | YES=0.185 NO=0.815
+2026-03-25 16:15:00,989 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.505 NO=0.495
+2026-03-25 16:15:01,022 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.515 NO=0.485
+2026-03-25 16:15:01,110 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.500 NO=0.500
+2026-03-25 16:15:03,607 INFO [SOL] >>> ENTRY UP | March 25, 3:15PM-3:20PM ET | conf=0.80 ev=0.300 | $1.20 @ 50.0c | time_in_slot=3s | entry #1
+2026-03-25 16:15:03,610 INFO CLOB client inicializado
+2026-03-25 16:15:03,819 INFO HTTP Request: GET https://clob.polymarket.com/tick-size?token_id=15622739348655116560667020914188037906354683682819952103531487692752463475637 "HTTP/2 200 OK"
+2026-03-25 16:15:03,858 INFO HTTP Request: GET https://clob.polymarket.com/neg-risk?token_id=15622739348655116560667020914188037906354683682819952103531487692752463475637 "HTTP/2 200 OK"
+2026-03-25 16:15:03,896 INFO HTTP Request: GET https://clob.polymarket.com/fee-rate?token_id=15622739348655116560667020914188037906354683682819952103531487692752463475637 "HTTP/2 200 OK"
+2026-03-25 16:15:04,442 INFO HTTP Request: POST https://clob.polymarket.com/order "HTTP/2 200 OK"
+2026-03-25 16:15:04,443 INFO [SOL] FAK OK: 2.26sh @ 53.0c
+2026-03-25 16:15:04,443 INFO [SOL] [OK] ENTRY UP via FAK @ 53.0c | March 25, 3:15PM-3:20PM ET
+2026-03-25 16:16:10,789 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.510 NO=0.490
+2026-03-25 16:16:41,135 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.510 NO=0.490
+2026-03-25 16:17:11,204 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.510 NO=0.490
+2026-03-25 16:17:11,447 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.515 NO=0.485
+2026-03-25 16:17:11,460 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.505 NO=0.495
+2026-03-25 16:18:00,993 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.510 NO=0.490
+2026-03-25 16:18:02,355 INFO [ETH] Cooldown 10min apos LOSS
+2026-03-25 16:18:02,355 INFO [ETH] LOSS | DOWN | entry=67.0c | pnl=$1.15 | March 25, 3:10PM-3:15PM ET
+2026-03-25 16:18:11,125 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.545 NO=0.455
+2026-03-25 16:18:11,132 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.515 NO=0.485
+2026-03-25 16:18:50,872 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.510 NO=0.490
+2026-03-25 16:18:51,580 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.515 NO=0.485
+2026-03-25 16:18:51,586 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.545 NO=0.455
+2026-03-25 16:19:00,235 INFO [ETH] PRE-SIGNAL para slot 1774466400: DOWN conf=0.60 | {'macd': 'HISTDN -0.1084', 'cvd': 'CVDDN -5', 'rsi': 'RSI 53.1'}
+2026-03-25 16:19:00,241 INFO [BTC] PRE-SIGNAL para slot 1774466400: UP conf=0.77 | {'macd': 'HISTUP 3.4895', 'cvd': 'CVDUP 1', 'rsi': 'RSI 26.7'}
+2026-03-25 16:19:21,234 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.545 NO=0.455
+2026-03-25 16:19:21,248 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.515 NO=0.485
+2026-03-25 16:19:21,409 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.525 NO=0.475
+2026-03-25 16:19:50,739 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.525 NO=0.475
+2026-03-25 16:19:51,196 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.545 NO=0.455
+2026-03-25 16:19:51,263 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:15PM-3:20PM ET | YES=0.515 NO=0.485
+2026-03-25 16:20:01,134 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.510 NO=0.490
+2026-03-25 16:20:01,291 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.525 NO=0.475
+2026-03-25 16:20:01,740 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.495 NO=0.505
+2026-03-25 16:20:31,010 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.510 NO=0.490
+2026-03-25 16:20:35,740 INFO [SOL] Cooldown 10min apos LOSS
+2026-03-25 16:20:35,740 INFO [SOL] LOSS | DOWN | entry=67.0c | pnl=$1.15 | March 25, 3:10PM-3:15PM ET
+2026-03-25 16:21:00,921 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.510 NO=0.490
+2026-03-25 16:21:30,792 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:22:01,195 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:22:06,737 INFO [SOL] WIN | UP | entry=53.0c | pnl=+$1.06 | March 25, 3:15PM-3:20PM ET
+2026-03-25 16:22:11,243 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.495 NO=0.505
+2026-03-25 16:22:11,265 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.525 NO=0.475
+2026-03-25 16:22:51,962 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:23:01,518 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:23:01,549 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.525 NO=0.475
+2026-03-25 16:23:51,432 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:24:01,192 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:24:01,247 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.525 NO=0.475
+2026-03-25 16:24:21,016 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:24:31,206 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.490 NO=0.510
+2026-03-25 16:24:31,252 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.525 NO=0.475
+2026-03-25 16:24:51,381 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:20PM-3:25PM ET | YES=0.445 NO=0.555
+2026-03-25 16:25:01,099 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.505 NO=0.495
+2026-03-25 16:25:01,567 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.500 NO=0.500
+2026-03-25 16:25:01,642 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.495 NO=0.505
+2026-03-25 16:25:31,435 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.500 NO=0.500
+2026-03-25 16:25:31,612 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.505 NO=0.495
+2026-03-25 16:25:31,636 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.495 NO=0.505
+2026-03-25 16:26:01,369 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.490 NO=0.510
+2026-03-25 16:26:01,467 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.505 NO=0.495
+2026-03-25 16:26:01,521 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.495 NO=0.505
+2026-03-25 16:26:31,259 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.490 NO=0.510
+2026-03-25 16:26:31,434 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.495 NO=0.505
+2026-03-25 16:26:31,491 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.535 NO=0.465
+2026-03-25 16:27:01,374 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.535 NO=0.465
+2026-03-25 16:27:01,386 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.485 NO=0.515
+2026-03-25 16:27:01,655 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.490 NO=0.510
+2026-03-25 16:27:51,966 INFO [BTC] Mercado: Bitcoin Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.535 NO=0.465
+2026-03-25 16:28:01,547 INFO [ETH] Mercado: Ethereum Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.485 NO=0.515
+2026-03-25 16:28:01,643 INFO [SOL] Mercado: Solana Up or Down - March 25, 3:25PM-3:30PM ET | YES=0.490 NO=0.510

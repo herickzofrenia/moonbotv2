@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>MOONBOT v2 — Trading Terminal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg: #08090c;
+  --bg2: #0c0e12;
+  --panel: #0d0f14;
+  --panel2: #10131a;
+  --border: #1c2030;
+  --border2: #151825;
+
+  /* rainbow palette */
+  --r1: #ff6b6b;  /* coral red */
+  --r2: #ffa94d;  /* orange */
+  --r3: #ffd43b;  /* yellow */
+  --r4: #69db7c;  /* green */
+  --r5: #38d9a9;  /* teal */
+  --r6: #4dabf7;  /* blue */
+  --r7: #9775fa;  /* purple */
+  --r8: #f783ac;  /* pink */
+
+  /* functional colors */
+  --green: #69db7c;
+  --red: #ff6b6b;
+  --yellow: #ffd43b;
+  --cyan: #38d9a9;
+  --blue: #4dabf7;
+  --purple: #9775fa;
+  --pink: #f783ac;
+  --orange: #ffa94d;
+  --white: #dee2e6;
+  --muted: #495057;
+  --muted2: #343a40;
+  --text: #adb5bd;
+  --text2: #868e96;
+
+  /* rainbow gradient */
+  --rainbow: linear-gradient(90deg, var(--r1), var(--r2), var(--r3), var(--r4), var(--r5), var(--r6), var(--r7), var(--r8));
+  --rainbow-v: linear-gradient(180deg, var(--r6), var(--r7), var(--r8), var(--r1));
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── TOP BAR ── */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 16px;height:40px;flex-shrink:0;
+  background: var(--bg2);
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.topbar::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:var(--rainbow);opacity:.4;
+}
+.top-left{display:flex;align-items:center;gap:16px}
+.logo{
+  font-family:'Outfit',sans-serif;
+  font-weight:800;font-size:16px;
+  background:var(--rainbow);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:1px;
+}
+.logo-sub{font-size:10px;color:var(--muted);letter-spacing:.5px;margin-left:6px;font-family:'JetBrains Mono',monospace}
+.top-right{display:flex;align-items:center;gap:12px}
+
+.chip{
+  padding:3px 10px;font-size:10px;letter-spacing:.5px;
+  border:1px solid var(--border);background:var(--panel2);
+  color:var(--muted);font-family:'JetBrains Mono',monospace;
+}
+.chip.live{border-color:var(--red);color:var(--red);background:rgba(255,107,107,0.07)}
+.chip.dry{border-color:var(--yellow);color:var(--yellow);background:rgba(255,212,59,0.05)}
+
+.conn-wrap{display:flex;align-items:center;gap:5px}
+.cdot{width:6px;height:6px;border-radius:50%;background:var(--muted)}
+.cdot.on{background:var(--green);box-shadow:0 0 6px rgba(105,219,124,0.5)}
+.cdot.off{background:var(--red)}
+
+/* ── MAIN GRID ── */
+.main{
+  flex:1;display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:1px;padding:1px;
+  background:var(--border2);
+  overflow:hidden;
+}
+
+/* ── PANELS ── */
+.panel{
+  background:#0a0b0e;
+  display:flex;flex-direction:column;
+  overflow:hidden;position:relative;
+  cursor:pointer;
+  transition:background .2s;
+}
+.panel::after{
+  content:'';position:absolute;inset:0;
+  border:1px solid var(--border);
+  pointer-events:none;z-index:2;
+  transition: border-color .25s;
+}
+.panel:hover::after{border-color:#2a2e3a}
+
+/* selected: rainbow border */
+.panel.selected::after{
+  border:2px solid transparent;
+  border-image: linear-gradient(135deg, var(--r1), var(--r2), var(--r3), var(--r4), var(--r5), var(--r6), var(--r7), var(--r8)) 1;
+  animation: borderShift 4s linear infinite;
+}
+@keyframes borderShift{
+  0%{border-image:linear-gradient(0deg,var(--r1),var(--r2),var(--r3),var(--r4),var(--r5),var(--r6),var(--r7),var(--r8)) 1}
+  25%{border-image:linear-gradient(90deg,var(--r3),var(--r4),var(--r5),var(--r6),var(--r7),var(--r8),var(--r1),var(--r2)) 1}
+  50%{border-image:linear-gradient(180deg,var(--r5),var(--r6),var(--r7),var(--r8),var(--r1),var(--r2),var(--r3),var(--r4)) 1}
+  75%{border-image:linear-gradient(270deg,var(--r7),var(--r8),var(--r1),var(--r2),var(--r3),var(--r4),var(--r5),var(--r6)) 1}
+  100%{border-image:linear-gradient(360deg,var(--r1),var(--r2),var(--r3),var(--r4),var(--r5),var(--r6),var(--r7),var(--r8)) 1}
+}
+
+/* selected: rainbow background glow — radial gradients, no blur/no leak */
+.panel.selected::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(192,64,96,0.22) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 0%, rgba(80,32,144,0.20) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(16,96,96,0.20) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 100%, rgba(176,80,32,0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(64,112,48,0.10) 0%, transparent 60%);
+  pointer-events:none;
+}
+.panel.selected > * { position:relative; z-index:1; }
+.panel.selected .ph{
+  position:relative; z-index:1;
+  background:rgba(10,11,14,0.55);
+}
+.panel.selected th{ background:rgba(255,255,255,0.01); }
+.panel.selected .log-scroll{ background:transparent; }
+
+.ph{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:7px 12px;
+  background:rgba(255,255,255,0.015);
+  border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.ph-title{
+  font-family:'Outfit',sans-serif;
+  font-size:11px;font-weight:700;
+  color:var(--white);letter-spacing:.8px;
+  text-transform:uppercase;
+}
+.ph-tag{
+  font-size:8px;letter-spacing:1px;padding:2px 7px;
+  border:1px solid;margin-left:8px;font-weight:500;
+  border-radius:2px;
+}
+.ph-tag.g{color:var(--green);border-color:rgba(105,219,124,.3);background:rgba(105,219,124,.06)}
+.ph-tag.y{color:var(--yellow);border-color:rgba(255,212,59,.3);background:rgba(255,212,59,.05)}
+.ph-tag.c{color:var(--cyan);border-color:rgba(56,217,169,.3);background:rgba(56,217,169,.06)}
+.ph-tag.p{color:var(--purple);border-color:rgba(151,117,250,.3);background:rgba(151,117,250,.06)}
+.ph-tag.b{color:var(--blue);border-color:rgba(77,171,247,.3);background:rgba(77,171,247,.06)}
+.ph-tag.pk{color:var(--pink);border-color:rgba(247,131,172,.3);background:rgba(247,131,172,.06)}
+
+.ph-dots{display:flex;gap:5px}
+.ph-dot{width:9px;height:9px;border-radius:50%}
+.ph-dot.r{background:var(--r1)}
+.ph-dot.y{background:var(--r3)}
+.ph-dot.g{background:var(--r4)}
+
+/* ── TABLES ── */
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{
+  text-align:left;padding:6px 10px;
+  font-size:9px;letter-spacing:1.2px;
+  color:var(--muted);font-weight:500;
+  border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,0.01);
+}
+td{padding:5px 10px;border-bottom:1px solid rgba(255,255,255,0.03);color:var(--text)}
+tr:hover td{background:rgba(255,255,255,0.015)}
+
+/* ── STATS ── */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border2)}
+.stat-box{background:var(--panel);padding:12px 14px}
+.stat-label{font-size:9px;color:var(--muted);letter-spacing:1.2px;margin-bottom:5px;font-weight:500}
+.stat-val{
+  font-family:'Outfit',sans-serif;
+  font-size:22px;font-weight:700;
+  color:var(--white);
+}
+.stat-val.green{color:var(--green)}
+.stat-val.red{color:var(--red)}
+.stat-val.yellow{color:var(--yellow)}
+.stat-val.cyan{color:var(--cyan)}
+.stat-val.purple{color:var(--purple)}
+.stat-val.blue{color:var(--blue)}
+.stat-val.pink{color:var(--pink)}
+.stat-val.sm{font-size:15px}
+
+/* ── PROGRESS BAR ── */
+.pbar{height:5px;background:var(--border2);border-radius:3px;overflow:hidden}
+.pbar-fill{height:100%;border-radius:3px;transition:width .4s ease}
+.pbar-fill.rainbow{background:var(--rainbow)}
+.pbar-fill.green{background:var(--green)}
+.pbar-fill.yellow{background:var(--yellow)}
+.pbar-fill.red{background:var(--red)}
+
+/* ── SLOT TIMER ── */
+.slot-timer{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,0.01);
+}
+.slot-timer-val{
+  font-family:'Outfit',sans-serif;
+  font-size:26px;font-weight:800;
+  min-width:70px;
+  background:var(--rainbow);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.slot-timer-val.warn{background:linear-gradient(90deg,var(--r2),var(--r3));-webkit-background-clip:text;background-clip:text}
+.slot-timer-val.crit{background:linear-gradient(90deg,var(--r1),var(--r2));-webkit-background-clip:text;background-clip:text}
+.slot-label{font-size:9px;color:var(--muted);letter-spacing:1px}
+
+/* ── SIGNAL BADGE ── */
+.sig-badge{
+  display:inline-flex;align-items:center;gap:3px;
+  padding:2px 8px;font-size:10px;letter-spacing:.5px;
+  border:1px solid;font-weight:600;border-radius:2px;
+}
+.sig-badge.up{color:var(--green);border-color:rgba(105,219,124,.35);background:rgba(105,219,124,.07)}
+.sig-badge.down{color:var(--red);border-color:rgba(255,107,107,.35);background:rgba(255,107,107,.07)}
+.sig-badge.none{color:var(--muted);border-color:var(--border);background:transparent}
+
+/* ── LOGS ── */
+.log-scroll{flex:1;overflow-y:auto;padding:4px 0}
+.log-line{padding:3px 12px;font-size:11px;border-left:2px solid transparent;display:flex;gap:8px}
+.log-line:hover{background:rgba(255,255,255,0.015)}
+.log-line.trade{border-left-color:var(--green)}
+.log-line.err{border-left-color:var(--red)}
+.log-line.warn{border-left-color:var(--yellow)}
+.log-line.info{border-left-color:var(--blue)}
+.log-ts{color:var(--muted);flex-shrink:0;width:62px}
+.log-msg{flex:1;word-break:break-all}
+
+/* ── FOOTER ── */
+.pfoot{
+  padding:4px 12px;font-size:9px;color:var(--muted);
+  border-top:1px solid rgba(255,255,255,0.03);
+  display:flex;justify-content:space-between;
+  flex-shrink:0;letter-spacing:.3px;
+}
+
+/* ── BOTTOM BAR ── */
+.bottombar{
+  height:28px;flex-shrink:0;
+  display:flex;align-items:center;
+  padding:0 16px;gap:20px;
+  background:var(--bg2);
+  border-top:1px solid var(--border);
+  font-size:10px;color:var(--muted);
+  overflow:hidden;position:relative;
+}
+.bottombar::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:var(--rainbow);opacity:.25;
+}
+.bb-item{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.bb-dot{width:5px;height:5px;border-radius:50%}
+
+/* ── OFFLINE ── */
+.offline{display:none;position:fixed;inset:0;z-index:10;background:rgba(8,9,12,0.88);align-items:center;justify-content:center;flex-direction:column;gap:10px}
+.offline.show{display:flex}
+.offline-text{
+  font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;
+  background:var(--rainbow);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:2px;animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ── SETTINGS ── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:100}
+.overlay.open{display:flex}
+.modal{background:var(--panel);border:1px solid var(--border);padding:24px;min-width:340px;border-radius:4px}
+.modal h3{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:16px}
+.modal label{font-size:10px;color:var(--muted);display:block;margin-bottom:4px}
+.modal input{width:100%;padding:7px 10px;margin-bottom:12px;background:var(--bg);border:1px solid var(--border);color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12px;border-radius:3px}
+.modal input:focus{outline:none;border-color:var(--blue)}
+.modal button{padding:7px 18px;border:1px solid var(--blue);color:var(--blue);font-family:'JetBrains Mono',monospace;cursor:pointer;font-size:11px;background:rgba(77,171,247,.08);border-radius:3px}
+.modal button:hover{background:rgba(77,171,247,.15)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+::-webkit-scrollbar-thumb:hover{background:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="top-left">
+    <div style="display:flex;align-items:baseline"><span class="logo">MOONBOT</span><span class="logo-sub">v2 early entry</span></div>
+    <div class="chip" id="mode-chip">DRY RUN</div>
+    <div class="conn-wrap"><div class="cdot off" id="cdot"></div><span style="font-size:10px" id="ctxt">offline</span></div>
+  </div>
+  <div class="top-right">
+    <span class="chip">uptime <span id="uptime" style="color:var(--white)">00:00:00</span></span>
+    <span class="chip" style="cursor:pointer" onclick="openCfg()">config</span>
+  </div>
+</div>
+
+<!-- MAIN GRID -->
+<div class="main">
+
+  <!-- P1: STATUS -->
+  <div class="panel selected" id="p1" onclick="selectPanel('p1')">
+    <div class="ph"><div><span class="ph-title">System Status</span><span class="ph-tag b">live</span></div><div class="ph-dots"><div class="ph-dot r"></div><div class="ph-dot y"></div><div class="ph-dot g"></div></div></div>
+    <div class="slot-timer">
+      <div><div class="slot-timer-val" id="slot-time">4:59</div><div class="slot-label">SLOT LEFT</div></div>
+      <div style="flex:1;padding:0 14px">
+        <div class="pbar" style="height:6px"><div class="pbar-fill rainbow" id="slot-bar" style="width:100%"></div></div>
+        <div style="display:flex;justify-content:space-between;margin-top:4px"><span style="font-size:8px;color:var(--muted)">0s</span><span style="font-size:9px;font-weight:600" id="slot-phase" style="color:var(--muted)">WAITING</span><span style="font-size:8px;color:var(--muted)">300s</span></div>
+      </div>
+      <div style="text-align:right"><div class="slot-label">STRATEGY</div><div style="font-size:11px;color:var(--cyan);font-weight:600">EARLY ENTRY</div></div>
+    </div>
+    <div class="stat-grid" style="flex:1">
+      <div class="stat-box"><div class="stat-label">TRADES</div><div class="stat-val blue" id="s-trades">0</div></div>
+      <div class="stat-box"><div class="stat-label">P&L</div><div class="stat-val green" id="s-pnl">$0.00</div></div>
+      <div class="stat-box"><div class="stat-label">WIN RATE</div><div class="stat-val purple" id="s-wr">0%</div></div>
+      <div class="stat-box"><div class="stat-label">W / L</div><div class="stat-val sm" id="s-wl">0 / 0</div></div>
+      <div class="stat-box"><div class="stat-label">BET SIZE</div><div class="stat-val sm cyan" id="s-bet">$2.50</div></div>
+      <div class="stat-box"><div class="stat-label">MIN EDGE</div><div class="stat-val sm yellow">5%</div></div>
+    </div>
+    <div class="pfoot"><span>moonbot v2.0</span><span id="sys-ts">--:--</span></div>
+  </div>
+
+  <!-- P2: ASSETS -->
+  <div class="panel" id="p2" onclick="selectPanel('p2')">
+    <div class="ph"><div><span class="ph-title">Assets & Signals</span><span class="ph-tag p">stream</span></div><div class="ph-dots"><div class="ph-dot r"></div><div class="ph-dot y"></div><div class="ph-dot g"></div></div></div>
+    <div style="flex:1;overflow-y:auto">
+      <table><thead><tr><th>#</th><th>ASSET</th><th>PRICE</th><th>CHG</th><th>MACD</th><th>CVD</th><th>RSI</th><th>SIGNAL</th><th>CONF</th></tr></thead><tbody id="asset-tbody"></tbody></table>
+      <div style="padding:10px 12px;border-top:1px solid rgba(255,255,255,.03)"><div style="font-size:9px;color:var(--muted);letter-spacing:1px;margin-bottom:6px">SIGNAL DETAILS</div><div id="signal-details" style="font-size:11px;color:var(--text2);line-height:1.8">waiting for data...</div></div>
+    </div>
+    <div class="pfoot"><span>binance ws + gamma api</span><span id="sig-ts">--:--</span></div>
+  </div>
+
+  <!-- P3: TRADES -->
+  <div class="panel" id="p3" onclick="selectPanel('p3')">
+    <div class="ph"><div><span class="ph-title">Trade History</span><span class="ph-tag g">log</span></div><div class="ph-dots"><div class="ph-dot r"></div><div class="ph-dot y"></div><div class="ph-dot g"></div></div></div>
+    <div style="flex:1;overflow-y:auto"><table><thead><tr><th>TIME</th><th>SYM</th><th>DIR</th><th>ENTRY</th><th>SIZE</th><th>STATUS</th><th>P&L</th><th>MARKET</th></tr></thead><tbody id="trade-tbody"><tr><td colspan="8" style="color:var(--muted);text-align:center;padding:24px">no trades yet</td></tr></tbody></table></div>
+    <div class="pfoot"><span>last 30 trades</span><span id="trade-ts">--:--</span></div>
+  </div>
+
+  <!-- P4: POSITIONS -->
+  <div class="panel" id="p4" onclick="selectPanel('p4')">
+    <div class="ph"><div><span class="ph-title">Open Positions</span><span class="ph-tag y">active</span></div><div class="ph-dots"><div class="ph-dot r"></div><div class="ph-dot y"></div><div class="ph-dot g"></div></div></div>
+    <div style="flex:1;overflow-y:auto"><table><thead><tr><th>ASSET</th><th>DIR</th><th>ENTRY</th><th>SHARES</th><th>COST</th><th>METHOD</th><th>STATUS</th></tr></thead><tbody id="pos-tbody"><tr><td colspan="7" style="color:var(--muted);text-align:center;padding:24px">no open positions</td></tr></tbody></table></div>
+    <div class="pfoot"><span>resolves every 30s</span><span id="pos-ts">--:--</span></div>
+  </div>
+
+  <!-- P5: CONFIG -->
+  <div class="panel" id="p5" onclick="selectPanel('p5')">
+    <div class="ph"><div><span class="ph-title">Bot Configuration</span><span class="ph-tag pk">config</span></div><div class="ph-dots"><div class="ph-dot r"></div><div class="ph-dot y"></div><div class="ph-dot g"></div></div></div>
+    <div style="flex:1;overflow-y:auto"><table><thead><tr><th>#</th><th>PARAMETER</th><th>VALUE</th><th>STATUS</th></tr></thead><tbody id="config-tbody"></tbody></table></div>
+    <div class="pfoot"><span>early entry config</span><span>polymarket.com</span></div>
+  </div>
+
+  <!-- P6: CONSOLE -->
+  <div class="panel" id="p6" onclick="selectPanel('p6')">
+    <div class="ph"><div><span class="ph-title">Console Output</span><span class="ph-tag c">stream</span></div><div class="ph-dots"><div class="ph-dot r"></div><div class="ph-dot y"></div><div class="ph-dot g"></div></div></div>
+    <div class="log-scroll" id="log-scroll"></div>
+    <div class="pfoot"><span>bot logs</span><span id="log-ts">--:--</span></div>
+  </div>
+
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="bottombar">
+  <div class="bb-item"><div class="bb-dot" id="ws-dot" style="background:var(--muted)"></div><span>binance ws</span></div>
+  <div class="bb-item"><div class="bb-dot" id="api-dot" style="background:var(--muted)"></div><span>api <span id="api-url-display">127.0.0.1:8765</span></span></div>
+  <div class="bb-item" style="color:var(--text2)">early_entry_v2 | first 120s | fak+gtc</div>
+  <div style="flex:1"></div>
+  <div class="bb-item"><span id="clock">--:--:--</span></div>
+</div>
+
+<!-- OFFLINE -->
+<div class="offline" id="offline"><div class="offline-text">AWAITING CONNECTION</div><div style="font-size:10px;color:var(--muted)">start moonbot_v2.py</div></div>
+
+<!-- SETTINGS -->
+<div class="overlay" id="cfg-overlay">
+  <div class="modal">
+    <h3>Config</h3>
+    <label>API URL</label><input id="cfg-api" value="http://127.0.0.1:8765">
+    <label>POLL INTERVAL (ms)</label><input id="cfg-poll" value="2000" type="number">
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button onclick="saveCfg()">Save</button>
+      <button onclick="closeCfg()" style="border-color:var(--border);color:var(--muted);background:transparent">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let API=localStorage.getItem('mb2_api')||'http://127.0.0.1:8765';
+let POLL=parseInt(localStorage.getItem('mb2_poll'))||2000;
+let connected=false,aData={},bPrices={},lastLogTs='';
+const pad=n=>String(n).padStart(2,'0');
+const now_ts=()=>new Date().toTimeString().slice(0,8);
+
+function xget(url){return new Promise((res,rej)=>{const x=new XMLHttpRequest();x.open('GET',url,true);x.timeout=2500;x.onload=()=>{try{res(JSON.parse(x.responseText))}catch(e){rej(e)}};x.onerror=()=>rej('net');x.ontimeout=()=>rej('timeout');x.send()})}
+
+// rainbow color cycle for accents
+const RC=['#ff6b6b','#ffa94d','#ffd43b','#69db7c','#38d9a9','#4dabf7','#9775fa','#f783ac'];
+let rci=0;
+function nextRC(){rci=(rci+1)%RC.length;return RC[rci]}
+
+function updateSlotTimer(){
+  const now=Math.floor(Date.now()/1000),elapsed=now%300,remaining=300-elapsed;
+  const m=Math.floor(remaining/60),s=remaining%60;
+  const el=document.getElementById('slot-time'),bar=document.getElementById('slot-bar'),phase=document.getElementById('slot-phase');
+  el.textContent=`${m}:${pad(s)}`;bar.style.width=`${(remaining/300)*100}%`;
+  if(elapsed<=120){el.className='slot-timer-val';bar.className='pbar-fill rainbow';phase.textContent='ENTRY WINDOW';phase.style.color='var(--green)'}
+  else if(remaining<=60){el.className='slot-timer-val warn';bar.className='pbar-fill yellow';phase.textContent='PRE-COMPUTING';phase.style.color='var(--yellow)'}
+  else{el.className='slot-timer-val';bar.className='pbar-fill rainbow';phase.textContent='MONITORING';phase.style.color='var(--muted)'}
+}
+
+function updateClock(){const t=now_ts();['clock','sys-ts','sig-ts','log-ts'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=t})}
+
+function buildConfigTable(){
+  const rows=[
+    ['1','Entry Strategy','Early Entry (first 120s)','ACTIVE'],
+    ['2','Execution','FAK + GTC Fallback','ACTIVE'],
+    ['3','Signal Req','2+ aligned indicators','ACTIVE'],
+    ['4','Min Confidence','40%','ACTIVE'],
+    ['5','Min Edge (EV)','5%','ACTIVE'],
+    ['6','Price Filter','20-80 cents','ACTIVE'],
+    ['7','Loss Cooldown','10 min per asset','ACTIVE'],
+    ['8','Max Positions','2 simultaneous','ACTIVE'],
+    ['9','Daily Loss Limit','-$10.00','ACTIVE'],
+    ['10','Kelly Sizing','25% partial Kelly','ACTIVE'],
+    ['11','MACD (F/S/Sig)','3 / 10 / 3','ACTIVE'],
+    ['12','Assets','BTC, ETH, SOL','ACTIVE'],
+  ];
+  document.getElementById('config-tbody').innerHTML=rows.map((r,i)=>{
+    const c=RC[i%RC.length];
+    return`<tr><td style="color:var(--muted);text-align:center">${r[0]}</td><td style="color:var(--white);font-weight:500">${r[1]}</td><td style="color:${c}">${r[2]}</td><td style="color:var(--green);font-size:10px;letter-spacing:.5px">${r[3]}</td></tr>`;
+  }).join('');
+}
+
+function startBinanceWS(){
+  const streams=['btcusdt@ticker','ethusdt@ticker','solusdt@ticker'].join('/');
+  const ws=new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams}`);
+  ws.onopen=()=>{document.getElementById('ws-dot').style.background='var(--green)'};
+  ws.onmessage=e=>{const d=JSON.parse(e.data).data;if(!d||!d.s)return;const sym=d.s.replace('USDT','');bPrices[sym]={price:parseFloat(d.c),change:parseFloat(d.P)};updateAssetTable()};
+  ws.onclose=()=>{document.getElementById('ws-dot').style.background='var(--red)';setTimeout(startBinanceWS,5000)};
+  ws.onerror=()=>{};
+}
+
+const SYM_COLORS={BTC:'#ffa94d',ETH:'#9775fa',SOL:'#38d9a9'};
+
+function updateAssetTable(){
+  const assets=['BTC','ETH','SOL'];const tbody=document.getElementById('asset-tbody');let dHtml='';
+  tbody.innerHTML=assets.map((sym,i)=>{
+    const bp=bPrices[sym]||{},ad=aData[sym]||{},sig=ad.signals||{};
+    const price=bp.price||ad.price||0,chg=bp.change||ad.change||0;
+    const macd=sig.macd||0,cvd=sig.cvd||0,rsi=sig.rsi||50;
+    const preDir=ad.pre_signal||ad.direction||null,preConf=ad.pre_confidence||ad.confidence||0;
+    const chgC=chg>=0?'var(--green)':'var(--red)';
+    const macdC=macd>0?'var(--green)':macd<0?'var(--red)':'var(--muted)';
+    const cvdC=cvd>0?'var(--green)':cvd<0?'var(--red)':'var(--muted)';
+    const rsiC=rsi<30?'var(--green)':rsi>70?'var(--red)':'var(--text2)';
+    let badge;if(preDir==='UP')badge='<span class="sig-badge up">UP</span>';else if(preDir==='DOWN')badge='<span class="sig-badge down">DN</span>';else badge='<span class="sig-badge none">--</span>';
+    const confC=preConf>=0.5?'var(--green)':preConf>=0.3?'var(--yellow)':'var(--muted)';
+    const sc=SYM_COLORS[sym]||'var(--white)';
+    if(preDir)dHtml+=`<div style="margin-bottom:3px"><span style="color:${sc};font-weight:600">${sym}</span> <span style="color:var(--muted)">&rarr;</span> <span style="color:${preDir==='UP'?'var(--green)':'var(--red)'}">${preDir}</span> <span style="color:var(--muted)">${(preConf*100).toFixed(0)}%</span> | macd ${macd.toFixed(4)} | rsi ${rsi.toFixed(1)}</div>`;
+    return`<tr><td style="color:var(--muted);text-align:center">${i+1}</td><td style="color:${sc};font-weight:600">${sym}</td><td style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--white)">$${price.toLocaleString('en',{minimumFractionDigits:2,maximumFractionDigits:2})}</td><td style="color:${chgC}">${chg>=0?'+':''}${chg.toFixed(2)}%</td><td style="color:${macdC}">${macd.toFixed(4)}</td><td style="color:${cvdC}">${cvd.toFixed(0)}</td><td style="color:${rsiC}">${rsi.toFixed(1)}</td><td>${badge}</td><td style="color:${confC}">${(preConf*100).toFixed(0)}%</td></tr>`;
+  }).join('');
+  if(dHtml)document.getElementById('signal-details').innerHTML=dHtml;
+}
+
+function applyStatus(d){
+  const u=d.uptime||0;document.getElementById('uptime').textContent=`${pad(~~(u/3600))}:${pad(~~((u%3600)/60))}:${pad(u%60)}`;
+  const mc=document.getElementById('mode-chip');mc.className=`chip ${d.mode==='live'?'live':'dry'}`;mc.textContent=d.mode==='live'?'LIVE':'DRY RUN';
+  const st=d.stats||{},trades=st.trades||0,wins=st.wins||0,losses=st.losses||0,pnl=st.pnl||0,wr=trades>0?Math.round(wins/trades*100):0;
+  document.getElementById('s-trades').textContent=trades;
+  const pe=document.getElementById('s-pnl');pe.textContent=`${pnl>=0?'+':''}$${Math.abs(pnl).toFixed(2)}`;pe.className=`stat-val ${pnl>=0?'green':'red'}`;
+  document.getElementById('s-wr').textContent=`${wr}%`;document.getElementById('s-wl').textContent=`${wins} / ${losses}`;document.getElementById('s-bet').textContent=`$${(d.bet_size||2.5).toFixed(2)}`;
+  if(d.asset_data){aData=d.asset_data;updateAssetTable()}
+}
+
+function applyTrades(trades){
+  if(!trades||!trades.length)return;
+  const open=trades.filter(t=>t.status==='open'||t.status==='OPEN');
+  const pt=document.getElementById('pos-tbody');
+  if(open.length){pt.innerHTML=open.slice(0,10).map(t=>{const isUp=t.direction==='UP',entry=((t.price||.5)*100).toFixed(1),shares=t.price>0?(t.size||2)/t.price:(t.size||2),dc=isUp?'var(--green)':'var(--red)',sc=SYM_COLORS[t.sym]||'var(--white)';return`<tr><td style="color:${sc};font-weight:600">${t.sym}</td><td style="color:${dc};font-weight:600">${t.direction}</td><td>${entry}c</td><td>${shares.toFixed(1)}</td><td style="color:var(--yellow)">$${parseFloat(t.size||2).toFixed(2)}</td><td style="color:var(--muted)">${t.method||'?'}</td><td style="color:var(--yellow)">OPEN</td></tr>`}).join('')}
+  else{pt.innerHTML='<tr><td colspan="7" style="color:var(--muted);text-align:center;padding:16px">no open positions</td></tr>'}
+  document.getElementById('pos-ts').textContent=now_ts();
+
+  const all=trades.slice(0,30),tb=document.getElementById('trade-tbody');
+  if(all.length){tb.innerHTML=all.map(t=>{const isUp=t.direction==='UP',entry=((t.price||.5)*100).toFixed(1),size=parseFloat(t.size||2),shares=t.price>0?size/t.price:size;let pnl=parseFloat(t.pnl||0);if(t.status==='WIN')pnl=(1-(t.price||.5))*shares;else if(t.status==='LOSS')pnl=-size;const stC=t.status==='WIN'?'var(--green)':t.status==='LOSS'?'var(--red)':'var(--yellow)',pC=pnl>0?'var(--green)':pnl<0?'var(--red)':'var(--muted)',dC=isUp?'var(--green)':'var(--red)',sc=SYM_COLORS[t.sym]||'var(--white)',sim=t.simulated?' [S]':'';return`<tr><td style="color:var(--muted)">${t.ts||'--'}</td><td style="color:${sc};font-weight:600">${t.sym}</td><td style="color:${dC}">${t.direction}</td><td>${entry}c</td><td style="color:var(--yellow)">$${size.toFixed(2)}</td><td style="color:${stC};font-weight:600">${t.status||'OPEN'}${sim}</td><td style="color:${pC};font-weight:600">${pnl!==0?(pnl>=0?'+':'')+('$'+Math.abs(pnl).toFixed(2)):'--'}</td><td style="color:var(--muted);font-size:10px;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${t.market_window||''}</td></tr>`}).join('')}
+  document.getElementById('trade-ts').textContent=now_ts();
+}
+
+function applyLogs(logs){
+  if(!logs||!logs.length)return;if(logs[0].ts===lastLogTs)return;lastLogTs=logs[0].ts;
+  const sc=document.getElementById('log-scroll');
+  sc.innerHTML=logs.slice(0,40).reverse().map(l=>{const cls=l.level==='trade'?'trade':l.level==='err'?'err':l.level==='warn'?'warn':'info',c=l.level==='trade'?'var(--green)':l.level==='err'?'var(--red)':l.level==='warn'?'var(--yellow)':'var(--text2)';return`<div class="log-line ${cls}"><span class="log-ts">${l.ts}</span><span class="log-msg" style="color:${c}">${l.msg}</span></div>`}).join('');
+  sc.scrollTop=sc.scrollHeight;
+}
+
+function setConn(ok){connected=ok;document.getElementById('cdot').className=`cdot ${ok?'on':'off'}`;const ct=document.getElementById('ctxt');ct.textContent=ok?'online':'offline';ct.style.color=ok?'var(--green)':'var(--muted)';document.getElementById('api-dot').style.background=ok?'var(--green)':'var(--red)';document.getElementById('offline').className=ok?'offline':'offline show'}
+
+async function poll(){
+  try{const s=await xget(API+'/api/status');setConn(true);applyStatus(s)}catch(e){setConn(false);return}
+  try{const t=await xget(API+'/api/trades');applyTrades(t.trades||[])}catch(e){}
+  try{const l=await xget(API+'/api/logs');applyLogs(l.logs||[])}catch(e){}
+}
+
+function openCfg(){document.getElementById('cfg-api').value=API;document.getElementById('cfg-poll').value=POLL;document.getElementById('cfg-overlay').classList.add('open')}
+function closeCfg(){document.getElementById('cfg-overlay').classList.remove('open')}
+function saveCfg(){API=document.getElementById('cfg-api').value.trim().replace(/\/$/,'');POLL=parseInt(document.getElementById('cfg-poll').value)||2000;localStorage.setItem('mb2_api',API);localStorage.setItem('mb2_poll',POLL);closeCfg();clearInterval(pi);pi=setInterval(poll,POLL)}
+document.getElementById('cfg-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeCfg()});
+
+function selectPanel(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('selected'));
+  const el=document.getElementById(id);
+  if(el)el.classList.add('selected');
+}
+
+buildConfigTable();updateAssetTable();startBinanceWS();
+setInterval(updateSlotTimer,250);setInterval(updateClock,1000);updateSlotTimer();updateClock();
+let pi=setInterval(poll,POLL);poll();
+document.getElementById('api-url-display').textContent=API.replace('http://','');
+</script>
+</body>
+</html>
