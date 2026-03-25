@@ -117,7 +117,8 @@ DOUBLEDOWN_MIN_CONF  = 0.60   # confiança mínima para double down (mais alta q
 DOUBLEDOWN_CONF_BUMP = 0.08   # sinal precisa subir pelo menos 8pp vs entrada original
 
 # Risk Controls
-LOSS_COOLDOWN_SECS = 600   # pausa 10min por ativo após loss
+LOSS_COOLDOWN_SECS = 600   # pausa 10min por ativo após streak de losses
+CONSECUTIVE_LOSSES_FOR_COOLDOWN = 3  # quantos losses seguidos pra ativar cooldown
 MAX_OPEN_POSITIONS = 3     # max posições abertas (subiu de 2 para 3 por causa do double down)
 DAILY_LOSS_LIMIT   = 10.0  # para se P&L < -$10
 
@@ -191,6 +192,8 @@ class AssetState:
         self.first_entry_conf  = 0.0    # confiança da 1a entrada
         self.first_entry_dir   = None   # direção da 1a entrada
         self.first_entry_ts    = 0      # timestamp da 1a entrada
+        # Consecutive loss tracking
+        self.consecutive_losses = 0      # losses seguidos (reseta no WIN)
 
 
 assets = {s: AssetState(s) for s in ASSETS}
@@ -1282,13 +1285,21 @@ def resolve_trades():
                         session_stats["pnl"] += pnl
                         if status == "WIN":
                             session_stats["wins"] += 1
+                            asset_obj = assets.get(sym.upper())
+                            if asset_obj:
+                                asset_obj.consecutive_losses = 0  # reset streak
                         else:
                             session_stats["losses"] += 1
                             asset_obj = assets.get(sym.upper())
                             if asset_obj:
-                                asset_obj.loss_cooldown_until = time.time() + LOSS_COOLDOWN_SECS
-                                log.info(f"[{sym}] Cooldown {LOSS_COOLDOWN_SECS // 60}min apos LOSS")
-                                add_log("warn", f"[{sym}] Cooldown {LOSS_COOLDOWN_SECS // 60}min apos LOSS")
+                                asset_obj.consecutive_losses += 1
+                                if asset_obj.consecutive_losses >= CONSECUTIVE_LOSSES_FOR_COOLDOWN:
+                                    asset_obj.loss_cooldown_until = time.time() + LOSS_COOLDOWN_SECS
+                                    log.info(f"[{sym}] {asset_obj.consecutive_losses} losses seguidos — cooldown {LOSS_COOLDOWN_SECS // 60}min")
+                                    add_log("warn", f"[{sym}] {asset_obj.consecutive_losses}x LOSS seguidos — cooldown {LOSS_COOLDOWN_SECS // 60}min")
+                                else:
+                                    log.info(f"[{sym}] LOSS {asset_obj.consecutive_losses}/{CONSECUTIVE_LOSSES_FOR_COOLDOWN} — sem cooldown ainda")
+                                    add_log("warn", f"[{sym}] LOSS {asset_obj.consecutive_losses}/{CONSECUTIVE_LOSSES_FOR_COOLDOWN}")
 
                         sign = "+" if pnl >= 0 else ""
                         log.info(f"[{sym}] {status} | {direction} | entry={entry_price * 100:.1f}c | pnl={sign}${abs(pnl):.2f} | {mkt_window}")
